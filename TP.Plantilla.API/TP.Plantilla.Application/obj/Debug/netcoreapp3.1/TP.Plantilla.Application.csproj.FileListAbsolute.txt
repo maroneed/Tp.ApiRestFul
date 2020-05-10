@@ -1,0 +1,14 @@
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\obj\Debug\netcoreapp3.1\TP.Plantilla.Application.csprojAssemblyReference.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\obj\Debug\netcoreapp3.1\TP.Plantilla.Application.AssemblyInfoInputs.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\obj\Debug\netcoreapp3.1\TP.Plantilla.Application.AssemblyInfo.cs
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\bin\Debug\netcoreapp3.1\TP.Plantilla.Application.deps.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\bin\Debug\netcoreapp3.1\TP.Plantilla.Application.runtimeconfig.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\bin\Debug\netcoreapp3.1\TP.Plantilla.Application.runtimeconfig.dev.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\bin\Debug\netcoreapp3.1\TP.Plantilla.Application.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\bin\Debug\netcoreapp3.1\TP.Plantilla.Application.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\obj\Debug\netcoreapp3.1\TP.Plantilla.Application.csproj.CopyComplete
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\obj\Debug\netcoreapp3.1\TP.Plantilla.Application.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\obj\Debug\netcoreapp3.1\TP.Plantilla.Application.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Application\obj\Debug\netcoreapp3.1\TP.Plantilla.Application.genruntimeconfig.cache

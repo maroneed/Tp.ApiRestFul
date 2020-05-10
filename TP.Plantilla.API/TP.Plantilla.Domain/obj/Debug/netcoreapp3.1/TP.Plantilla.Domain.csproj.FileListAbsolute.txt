@@ -1,0 +1,11 @@
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.deps.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.AssemblyInfoInputs.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.AssemblyInfo.cs
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.csprojAssemblyReference.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.runtimeconfig.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.runtimeconfig.dev.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.genruntimeconfig.cache

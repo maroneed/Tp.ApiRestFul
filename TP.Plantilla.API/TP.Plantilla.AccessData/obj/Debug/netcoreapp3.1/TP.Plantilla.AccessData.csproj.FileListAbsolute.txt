@@ -1,0 +1,16 @@
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.Application.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.csprojAssemblyReference.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.AssemblyInfoInputs.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.AssemblyInfo.cs
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.AccessData.deps.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.AccessData.runtimeconfig.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.AccessData.runtimeconfig.dev.json
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.AccessData.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.AccessData.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.Application.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\bin\Debug\netcoreapp3.1\TP.Plantilla.Domain.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.csproj.CopyComplete
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.pdb
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.genruntimeconfig.cache

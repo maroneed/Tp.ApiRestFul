@@ -1,0 +1,251 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.AccessData\\TP.Plantilla.AccessData.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.AccessData\\TP.Plantilla.AccessData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.AccessData\\TP.Plantilla.AccessData.csproj",
+        "projectName": "TP.Plantilla.AccessData",
+        "projectPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.AccessData\\TP.Plantilla.AccessData.csproj",
+        "packagesPath": "C:\\Users\\Invisible\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.AccessData\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Invisible\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Application\\TP.Plantilla.Application.csproj": {
+                "projectPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Application\\TP.Plantilla.Application.csproj"
+              },
+              "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\TP.Plantilla.Domain.csproj": {
+                "projectPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\TP.Plantilla.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            },
+            "SqlKata.Execution": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Application\\TP.Plantilla.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Application\\TP.Plantilla.Application.csproj",
+        "projectName": "TP.Plantilla.Application",
+        "projectPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Application\\TP.Plantilla.Application.csproj",
+        "packagesPath": "C:\\Users\\Invisible\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Invisible\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\TP.Plantilla.Domain.csproj": {
+                "projectPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\TP.Plantilla.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\TP.Plantilla.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\TP.Plantilla.Domain.csproj",
+        "projectName": "TP.Plantilla.Domain",
+        "projectPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\TP.Plantilla.Domain.csproj",
+        "packagesPath": "C:\\Users\\Invisible\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Invisible\\source\\repos\\Tp.ApiRestFul\\TP.Plantilla.API\\TP.Plantilla.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Invisible\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "SqlKata": {
+              "target": "Package",
+              "version": "[1.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
