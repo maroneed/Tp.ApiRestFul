@@ -9,3 +9,4 @@ C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Doma
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.dll
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.pdb
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.genruntimeconfig.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Domain\obj\Debug\netcoreapp3.1\TP.Plantilla.Domain.csproj.CoreCompileInputs.cache

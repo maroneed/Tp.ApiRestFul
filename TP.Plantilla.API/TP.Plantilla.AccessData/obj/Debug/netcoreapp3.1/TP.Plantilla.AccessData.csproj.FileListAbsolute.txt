@@ -14,3 +14,4 @@ C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.Acce
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.dll
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.pdb
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.genruntimeconfig.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.AccessData\obj\Debug\netcoreapp3.1\TP.Plantilla.AccessData.csproj.CoreCompileInputs.cache

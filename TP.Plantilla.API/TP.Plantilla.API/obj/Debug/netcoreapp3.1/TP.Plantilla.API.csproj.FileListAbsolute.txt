@@ -54,3 +54,11 @@ C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\obj\Debug\netcoreapp3.1\TP.Plantilla.API.dll
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\obj\Debug\netcoreapp3.1\TP.Plantilla.API.pdb
 C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\obj\Debug\netcoreapp3.1\TP.Plantilla.API.genruntimeconfig.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\bin\Debug\netcoreapp3.1\QueryBuilder.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\bin\Debug\netcoreapp3.1\Dapper.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\bin\Debug\netcoreapp3.1\SqlKata.Execution.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Data.SqlClient.dll
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\obj\Debug\netcoreapp3.1\TP.Plantilla.API.csproj.CoreCompileInputs.cache
+C:\Users\Invisible\source\repos\Tp.ApiRestFul\TP.Plantilla.API\TP.Plantilla.API\obj\Debug\netcoreapp3.1\TP.Plantilla.API.MvcApplicationPartsAssemblyInfo.cache
