@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Plantilla.API", "TP.Plantilla.API\TP.Plantilla.API.csproj", "{6181473B-EFB1-4FE8-B22A-E589D35CB36D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP.Plantilla.API", "TP.Plantilla.API\TP.Plantilla.API.csproj", "{6181473B-EFB1-4FE8-B22A-E589D35CB36D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Plantilla.Application", "TP.Plantilla.Application\TP.Plantilla.Application.csproj", "{AA6ECEEB-CE77-4F98-87F8-64D74B7B16FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP.Plantilla.Application", "TP.Plantilla.Application\TP.Plantilla.Application.csproj", "{AA6ECEEB-CE77-4F98-87F8-64D74B7B16FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Plantilla.Domain", "TP.Plantilla.Domain\TP.Plantilla.Domain.csproj", "{5E107AAC-C15A-47B6-8868-83F068530A90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP.Plantilla.Domain", "TP.Plantilla.Domain\TP.Plantilla.Domain.csproj", "{5E107AAC-C15A-47B6-8868-83F068530A90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Plantilla.AccessData", "TP.Plantilla.AccessData\TP.Plantilla.AccessData.csproj", "{657FFCF4-DFB9-4C30-A436-2825D2F2D645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP.Plantilla.AccessData", "TP.Plantilla.AccessData\TP.Plantilla.AccessData.csproj", "{657FFCF4-DFB9-4C30-A436-2825D2F2D645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

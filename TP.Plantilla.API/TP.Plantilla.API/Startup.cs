@@ -14,11 +14,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SqlKata.Compilers;
 using TP.Plantilla.AccessData;
 using TP.Plantilla.AccessData.Commands;
+using TP.Plantilla.AccessData.Queries;
 using TP.Plantilla.Application.Services;
 using TP.Plantilla.Domain.Commands;
-
+using TP.Plantilla.Domain.Queries;
 
 namespace TP.Plantilla.API
 {
@@ -39,6 +41,19 @@ namespace TP.Plantilla.API
             services.AddDbContext<SystemContext>(opt => opt.UseSqlServer(connectionString));
             services.AddTransient<IGenericsRepository, GenericsRepository>();
             services.AddTransient<IClienteService, ClienteService>();
+            services.AddTransient<ICarrito_ProductoService, Carrito_ProductoService>();
+            services.AddTransient<ICarrito_ProductoQuery, Carrito_ProductoQuery>();
+
+
+            //SqlKata
+            services.AddTransient<Compiler, SqlServerCompiler>();
+            services.AddTransient<IDbConnection>(b =>
+            {
+                return new SqlConnection(connectionString);
+            });
+            
+            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

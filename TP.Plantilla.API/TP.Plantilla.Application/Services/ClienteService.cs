@@ -34,5 +34,12 @@ namespace TP.Plantilla.Application.Services
 
             return entity;
         }
+
+        public interface ICursoServices
+        {
+            GenericCreateResponseDto CreateCurso(Carrito_ProductoDto Carrito_productoDto);
+            List<ResponseGetAllCarrito_ProductoDto> GetCarrito_Producto(string apellido);
+            ResponseGetCarrito_ProductoById GetById(int carrito_productoId);
+        }
     }
 }
