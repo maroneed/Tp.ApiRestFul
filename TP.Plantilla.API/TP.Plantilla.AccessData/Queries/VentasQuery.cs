@@ -28,12 +28,15 @@ namespace TP.Plantilla.AccessData.Queries
 
             var query = db.Query("Ventas")
                 .Select("Ventas.ventasId", "Ventas.fecha",
-                "Clientes.nombre as ClienteNombre", "Clientes.apellido as ClienteApellido"
+                "Clientes.nombre as ClienteNombre", "Clientes.apellido as ClienteApellido",
+                 "Productos.nombre as ProductoNombre","Productos.precio as ProductoPrecio"
                 )
                 .Join("Carritos", "Ventas.carritoId", "Carritos.carritoId")
                 .Join("Carrito_Productos", "Carritos.carritoProductoId", "Carrito_Productos.carrito_productoId")
-                .Join("Clientes", "Carritos.clienteId", "Clientes.clienteId");
+                .Join("Clientes", "Carritos.clienteId", "Clientes.clienteId")
+                .Join("Productos", "Carrito_Productos.carrito_productoId", "Productos.carrito_productoId");
 
+            
             var result = query.Get<GetVentas>();
                 
 

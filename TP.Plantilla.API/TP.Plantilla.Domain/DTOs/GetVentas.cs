@@ -9,12 +9,14 @@ namespace TP.Plantilla.Domain.DTOs
     {
         
         public int ventasId { get; set; }
-        public string ClienteNombre { get; set; }
-        public string ClienteApellido { get; set; }
+        public string ClienteNombre { get; set; }  //sacados de tabla cliente
+        public string ClienteApellido { get; set; }  //sacados de tabla cliente
 
+        public string ProductoNombre { get; set; }
+        public int ProductoPrecio { get; set; }
         public DateTime fecha { get; set; }
 
-        //public GetCliente Cliente { get; set; }
+        
         //public List<GetProducto> Producto { get; set; }
     }
 
