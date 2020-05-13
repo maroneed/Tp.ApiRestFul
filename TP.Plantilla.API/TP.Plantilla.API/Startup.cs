@@ -41,8 +41,13 @@ namespace TP.Plantilla.API
             services.AddDbContext<SystemContext>(opt => opt.UseSqlServer(connectionString));
             services.AddTransient<IGenericsRepository, GenericsRepository>();
             services.AddTransient<IClienteService, ClienteService>();
+            services.AddTransient<IProductoService, ProductoService>();
+            services.AddTransient<ICarritoService, CarritoService>();
+            services.AddTransient<IVentasService, VentasService>();
+
             services.AddTransient<ICarrito_ProductoService, Carrito_ProductoService>();
             services.AddTransient<ICarrito_ProductoQuery, Carrito_ProductoQuery>();
+            services.AddTransient<IVentasQuery, VentasQuery>();
 
 
             //SqlKata

@@ -10,33 +10,29 @@ using TP.Plantilla.Domain.Entities;
 
 namespace TP.Plantilla.API.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
-    public class ClienteController : ControllerBase
+    public class ProductoController: ControllerBase
     {
-
-        private readonly IClienteService _service;
+        private readonly IProductoService _service;
         private readonly SystemContext context;
 
-        public ClienteController(IClienteService service,SystemContext c)
+        public ProductoController(IProductoService service,SystemContext c)
         {
             _service = service;
             context = c;
         }
 
         [HttpPost]
-        public Cliente Post(ClienteDto cliente) 
+        public Producto Post(ProductoDto producto)
         {
-            return _service.CreateCliente(cliente);
+            return _service.CreateProducto(producto);
         }
 
-        // [HttpGet]
-        // public IEnumerable<Cliente> Get()
-        // {
-        //     return context.Clientes.ToList();
-        //}
-        
-        
+        [HttpGet]
+        public IEnumerable<Producto> Get()
+        {
+            return context.Productos.ToList();
+        }
     }
 }

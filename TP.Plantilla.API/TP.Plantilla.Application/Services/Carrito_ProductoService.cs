@@ -16,8 +16,8 @@ namespace TP.Plantilla.Application.Services
     public interface ICarrito_ProductoService 
     {
         public GenericCreateResponseDto createCarrito_producto(Carrito_ProductoDto carrito_productoDto);
-        List<ResponseGetAllCarrito_ProductoDto> GetCarrito_producto(int apellido);
-        ResponseGetCarrito_ProductoById GetById(int cursoId);
+        public List<ResponseGetAllCarrito_ProductoDto> GetCarrito_producto();
+        public ResponseGetCarrito_ProductoById GetById(int Id);
     }
 
 
@@ -25,7 +25,6 @@ namespace TP.Plantilla.Application.Services
     {
         private readonly IGenericsRepository _repository;
         private readonly ICarrito_ProductoQuery _query;
-
 
         public Carrito_ProductoService(IGenericsRepository repository,ICarrito_ProductoQuery query)
         {
@@ -35,9 +34,12 @@ namespace TP.Plantilla.Application.Services
 
         public GenericCreateResponseDto createCarrito_producto(Carrito_ProductoDto carrito_productoDto) 
         {
+
+            //List<Producto> productos = new List<Producto>();
+
             var entity = new Carrito_Producto
             {
-                carritoId = carrito_productoDto.carritoId
+                productoNavigator = carrito_productoDto.productoNavigator
 
             };
             _repository.Add(entity);
@@ -49,9 +51,10 @@ namespace TP.Plantilla.Application.Services
             return _query.GetById(carrito_productoId);
         }
 
-        public List<ResponseGetAllCarrito_ProductoDto> GetCarrito_producto(int apellido)
+        public List<ResponseGetAllCarrito_ProductoDto> GetCarrito_producto()
         {
             return _query.GetAllCarrito_producto();
         }
+        
     }
 }

@@ -4,6 +4,9 @@ using System.Text;
 using TP.Plantilla.Domain.Commands;
 using TP.Plantilla.Domain.DTOs;
 using TP.Plantilla.Domain.Entities;
+using TP.Plantilla.Application;
+
+
 
 namespace TP.Plantilla.Application.Services
 {
@@ -11,10 +14,12 @@ namespace TP.Plantilla.Application.Services
     public interface IClienteService
     {
         Cliente CreateCliente(ClienteDto Cliente);
+       // public List <Cliente> ListarClientes();
     }
     public class ClienteService : IClienteService
     {
         private readonly IGenericsRepository _repository;
+        
         public ClienteService(IGenericsRepository repository)
         {
             _repository = repository;
@@ -31,15 +36,15 @@ namespace TP.Plantilla.Application.Services
                 direccion = cliente.direccion
             };
             _repository.Add<Cliente>(entity);
-
+            
             return entity;
         }
 
-        public interface ICursoServices
-        {
-            GenericCreateResponseDto CreateCurso(Carrito_ProductoDto Carrito_productoDto);
-            List<ResponseGetAllCarrito_ProductoDto> GetCarrito_Producto(string apellido);
-            ResponseGetCarrito_ProductoById GetById(int carrito_productoId);
-        }
+        //public List <Cliente> ListarClientes()
+        //{
+       //     foreach(Cliente c in )
+        //}
+
+        
     }
 }

@@ -10,7 +10,7 @@ using TP.Plantilla.AccessData;
 namespace TP.Plantilla.AccessData.Migrations
 {
     [DbContext(typeof(SystemContext))]
-    [Migration("20200509060201_1")]
+    [Migration("20200512220042_1")]
     partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,6 +27,9 @@ namespace TP.Plantilla.AccessData.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("carritoProductoId")
+                        .HasColumnType("int");
 
                     b.Property<int>("clienteId")
                         .HasColumnType("int");
@@ -50,7 +53,8 @@ namespace TP.Plantilla.AccessData.Migrations
 
                     b.HasKey("carrito_productoId");
 
-                    b.HasIndex("carritoId");
+                    b.HasIndex("carritoId")
+                        .IsUnique();
 
                     b.ToTable("Carrito_Productos");
                 });
@@ -147,14 +151,15 @@ namespace TP.Plantilla.AccessData.Migrations
 
                     b.HasKey("ventasId");
 
-                    b.HasIndex("carritoId");
+                    b.HasIndex("carritoId")
+                        .IsUnique();
 
                     b.ToTable("Ventas");
                 });
 
             modelBuilder.Entity("TP.Plantilla.Domain.Entities.Carrito", b =>
                 {
-                    b.HasOne("TP.Plantilla.Domain.Entities.Cliente", "clienteNavigator")
+                    b.HasOne("TP.Plantilla.Domain.Entities.Cliente", "ClienteNavigator")
                         .WithMany()
                         .HasForeignKey("clienteId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -163,9 +168,9 @@ namespace TP.Plantilla.AccessData.Migrations
 
             modelBuilder.Entity("TP.Plantilla.Domain.Entities.Carrito_Producto", b =>
                 {
-                    b.HasOne("TP.Plantilla.Domain.Entities.Carrito", "carritoNavigator")
-                        .WithMany()
-                        .HasForeignKey("carritoId")
+                    b.HasOne("TP.Plantilla.Domain.Entities.Carrito", null)
+                        .WithOne("carrito_ProductoNavigator")
+                        .HasForeignKey("TP.Plantilla.Domain.Entities.Carrito_Producto", "carritoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

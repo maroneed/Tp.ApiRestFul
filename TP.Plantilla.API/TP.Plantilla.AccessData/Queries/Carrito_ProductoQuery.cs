@@ -25,7 +25,7 @@ namespace TP.Plantilla.AccessData.Queries
         public List<ResponseGetAllCarrito_ProductoDto> GetAllCarrito_producto()
         {
             var db = new QueryFactory(connection, sqlKataCompiler);
-            var query = db.Query("Carrito_Producto");
+            var query = db.Query("Carrito_Productos");
 
 
             var result = query.Get<ResponseGetAllCarrito_ProductoDto>();
@@ -33,20 +33,29 @@ namespace TP.Plantilla.AccessData.Queries
             return result.ToList();
 
         }
-        public ResponseGetCarrito_ProductoById GetById(int cursoId)
+        public ResponseGetCarrito_ProductoById GetById(int id)
         {
             var db = new QueryFactory(connection, sqlKataCompiler);
-            var carrito_producto = db.Query("Cursos")
+            var carrito_producto = db.Query("Carrito_Productos").Where("carrito_productoId", "=", id)
+                
                 
                 .FirstOrDefault<ResponseGetAllCarrito_ProductoDto>();
+                
+                
 
 
 
             return new ResponseGetCarrito_ProductoById
             {
-                carritoId = carrito_producto.carritoId
+                carrito_productoId = carrito_producto.carrito_productoId,
+                
+                productoNavigator = carrito_producto.productoNavigator
+                
             };
         }
+
+        
+
     }
 
 }

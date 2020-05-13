@@ -10,33 +10,29 @@ using TP.Plantilla.Domain.Entities;
 
 namespace TP.Plantilla.API.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
-    public class ClienteController : ControllerBase
+    public class CarritoController : ControllerBase
     {
-
-        private readonly IClienteService _service;
+        private readonly ICarritoService _service;
         private readonly SystemContext context;
-
-        public ClienteController(IClienteService service,SystemContext c)
+        public CarritoController(ICarritoService service, SystemContext c)
         {
             _service = service;
             context = c;
         }
 
         [HttpPost]
-        public Cliente Post(ClienteDto cliente) 
+        public Carrito Post(CarritoDto carrito)
         {
-            return _service.CreateCliente(cliente);
+            return _service.CreateCarrito(carrito);
         }
 
-        // [HttpGet]
-        // public IEnumerable<Cliente> Get()
-        // {
-        //     return context.Clientes.ToList();
-        //}
-        
-        
+        [HttpGet]
+        [HttpGet]
+        public IEnumerable<Carrito> Get()
+        {
+            return context.Carritos.ToList();
+        }
     }
 }
