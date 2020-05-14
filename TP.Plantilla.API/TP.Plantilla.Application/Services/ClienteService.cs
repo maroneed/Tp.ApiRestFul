@@ -5,7 +5,7 @@ using TP.Plantilla.Domain.Commands;
 using TP.Plantilla.Domain.DTOs;
 using TP.Plantilla.Domain.Entities;
 using TP.Plantilla.Application;
-
+using TP.Plantilla.Domain.Queries;
 
 
 namespace TP.Plantilla.Application.Services
@@ -14,15 +14,19 @@ namespace TP.Plantilla.Application.Services
     public interface IClienteService
     {
         Cliente CreateCliente(ClienteDto Cliente);
-       // public List <Cliente> ListarClientes();
+        // public List <Cliente> ListarClientes();
+        public List<ResponseGetCliente> GetCliente(string dni);
+
     }
     public class ClienteService : IClienteService
     {
         private readonly IGenericsRepository _repository;
-        
-        public ClienteService(IGenericsRepository repository)
+        private readonly IClienteQuery _query;
+
+        public ClienteService(IGenericsRepository repository, IClienteQuery query)
         {
             _repository = repository;
+            _query = query;
         }
 
         public Cliente CreateCliente(ClienteDto cliente)
@@ -40,11 +44,14 @@ namespace TP.Plantilla.Application.Services
             return entity;
         }
 
-        //public List <Cliente> ListarClientes()
-        //{
-        //     foreach(Cliente c in )
-        //}
+        public List<ResponseGetCliente> GetCliente(string dni)
+        {
+
+            return _query.GetClienteDni(dni);
+            //return context.Ventas.Include(v => v.carritoNavigator).ToList();
+        }
 
         
+
     }
 }

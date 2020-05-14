@@ -15,11 +15,11 @@ namespace TP.Plantilla.API.Controllers
     public class CarritoController : ControllerBase
     {
         private readonly ICarritoService _service;
-        private readonly SystemContext context;
-        public CarritoController(ICarritoService service, SystemContext c)
+        //private readonly SystemContext context;
+        public CarritoController(ICarritoService service)
         {
             _service = service;
-            context = c;
+            //context = c;
         }
 
         [HttpPost]
@@ -28,11 +28,11 @@ namespace TP.Plantilla.API.Controllers
             return _service.CreateCarrito(carrito);
         }
 
-        [HttpGet]
-        [HttpGet]
-        public IEnumerable<Carrito> Get()
-        {
-            return context.Carritos.ToList();
-        }
+        
+        //[HttpGet]
+        //public IEnumerable<Carrito> Get()
+       // {
+       //     return context.Carritos.ToList();
+        //}
     }
 }

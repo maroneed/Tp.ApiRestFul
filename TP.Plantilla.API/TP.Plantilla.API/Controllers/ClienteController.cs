@@ -27,31 +27,42 @@ namespace TP.Plantilla.API.Controllers
         }
 
         [HttpPost]
-        public Cliente Post(ClienteDto cliente)
+        public IActionResult Post(ClienteDto cliente)
         {
-            return _service.CreateCliente(cliente);
+            try
+            {
+                return new JsonResult(_service.CreateCliente(cliente)) { StatusCode = 201 };
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+            
         }
 
-        // [HttpGet]
-        // public IEnumerable<Cliente> Get()
-        // {
-        //     return context.Clientes.ToList();
-        //}
+        
 
         [HttpGet]
-        public List<ResponseGetCliente> GetClienteDni(string dni)
+        public IActionResult GetClienteDni(string dni)
         {
-            return _query.GetClienteDni(dni);
+
+            try
+            {
+                return new JsonResult(_service.GetCliente(dni)) { StatusCode = 201 };
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
+            
             //return context.Ventas.Include(v => v.carritoNavigator).ToList();
         }
 
 
-        [HttpGet("{Nombre}")]
-        public List<ResponseGetCliente> GetClienteNombreApellido(string nombre)
-        {
-            return _query.GetClienteNombreApellido(nombre);
-            //return context.Ventas.Include(v => v.carritoNavigator).ToList();
-        }
+        
 
         
     }

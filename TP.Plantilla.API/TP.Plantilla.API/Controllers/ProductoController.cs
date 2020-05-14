@@ -26,20 +26,35 @@ namespace TP.Plantilla.API.Controllers
         }
 
         [HttpPost]
-        public Producto Post(ProductoDto producto)
+        public IActionResult Post(ProductoDto producto)
         {
-            return _service.CreateProducto(producto);
+            try
+            {
+                return new JsonResult(_service.CreateProducto(producto)) { StatusCode = 201 };
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
         }
 
-        //[HttpGet]
-        //public IEnumerable<Producto> Get()
-       // {
-       //     return context.Productos.ToList();
-        //}
+        
         [HttpGet]
-        public List<Producto> GetProductos(string codigo)
+        public IActionResult GetProductos(string codigo)
         {
-            return _query.GetProductos(codigo);
+            try
+            {
+                return new JsonResult(_service.ListarProductos(codigo)) { StatusCode = 201 };
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
+            
 
         }
         

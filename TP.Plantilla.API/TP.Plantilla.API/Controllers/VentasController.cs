@@ -34,24 +34,36 @@ namespace TP.Plantilla.API.Controllers
         }
 
         [HttpPost]
-        public Ventas Post(VentasDto ventas) //que reciba un list de productos
+        public IActionResult Post(VentasDto ventas) //que reciba un list de productos
         {
 
+            try
+            {
+                return new JsonResult(_service.CreateVenta(ventas)) { StatusCode = 201 };
 
-            return _service.CreateVenta(ventas);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+            
         }
 
-       // [HttpGet]
-       // public List<GetVentas> Get()
-       // {
-        //    return _query.ListarVentas();
-            //return context.Ventas.Include(v => v.carritoNavigator).ToList();
-        //}
+       
       
         [HttpGet]
-        public List<GetVentas> FiltrarVentaPorProducto(string nombre)
+        public IActionResult FiltrarVentaPorProducto(string nombre)
         {
-            return _query.FiltrarVentaPorProducto(nombre);
+            try
+            {
+                return new JsonResult(_service.ListarVentas(nombre)) { StatusCode = 201 };
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+            
 
         }
 

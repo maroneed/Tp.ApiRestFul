@@ -34,7 +34,7 @@ namespace TP.Plantilla.AccessData.Queries
                 "Clientes.direccion",
                 "Clientes.telefono")
                 
-                .When(!string.IsNullOrWhiteSpace(dni), c => c.WhereLike("Clientes.dni", $"{dni}%"));
+                .When(!string.IsNullOrWhiteSpace(dni), c => c.WhereLike("Clientes.dni", $"{dni}"));
                 
 
             var result = query.Get<ResponseGetCliente>();
