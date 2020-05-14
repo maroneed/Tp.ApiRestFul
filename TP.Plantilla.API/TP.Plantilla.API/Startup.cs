@@ -44,10 +44,13 @@ namespace TP.Plantilla.API
             services.AddTransient<IProductoService, ProductoService>();
             services.AddTransient<ICarritoService, CarritoService>();
             services.AddTransient<IVentasService, VentasService>();
-
             services.AddTransient<ICarrito_ProductoService, Carrito_ProductoService>();
+            //Queries
             services.AddTransient<ICarrito_ProductoQuery, Carrito_ProductoQuery>();
             services.AddTransient<IVentasQuery, VentasQuery>();
+            services.AddTransient<IClienteQuery, ClienteQuery>();
+            services.AddTransient<IProductoQuery, ProductoQuery>();
+
 
 
             //SqlKata

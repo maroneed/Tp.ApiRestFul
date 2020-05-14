@@ -7,6 +7,7 @@ using TP.Plantilla.AccessData;
 using TP.Plantilla.Application.Services;
 using TP.Plantilla.Domain.DTOs;
 using TP.Plantilla.Domain.Entities;
+using TP.Plantilla.Domain.Queries;
 
 namespace TP.Plantilla.API.Controllers
 {
@@ -17,16 +18,16 @@ namespace TP.Plantilla.API.Controllers
     {
 
         private readonly IClienteService _service;
-        private readonly SystemContext context;
+        private readonly IClienteQuery _query;
 
-        public ClienteController(IClienteService service,SystemContext c)
+        public ClienteController(IClienteService service, IClienteQuery query)
         {
             _service = service;
-            context = c;
+            _query = query;
         }
 
         [HttpPost]
-        public Cliente Post(ClienteDto cliente) 
+        public Cliente Post(ClienteDto cliente)
         {
             return _service.CreateCliente(cliente);
         }
@@ -36,7 +37,22 @@ namespace TP.Plantilla.API.Controllers
         // {
         //     return context.Clientes.ToList();
         //}
-        
+
+        [HttpGet]
+        public List<ResponseGetCliente> GetClienteDni(string dni)
+        {
+            return _query.GetClienteDni(dni);
+            //return context.Ventas.Include(v => v.carritoNavigator).ToList();
+        }
+
+
+        [HttpGet("{Nombre}")]
+        public List<ResponseGetCliente> GetClienteNombreApellido(string nombre)
+        {
+            return _query.GetClienteNombreApellido(nombre);
+            //return context.Ventas.Include(v => v.carritoNavigator).ToList();
+        }
+
         
     }
 }

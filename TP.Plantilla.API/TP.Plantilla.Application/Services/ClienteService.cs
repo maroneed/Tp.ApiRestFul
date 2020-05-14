@@ -42,7 +42,7 @@ namespace TP.Plantilla.Application.Services
 
         //public List <Cliente> ListarClientes()
         //{
-       //     foreach(Cliente c in )
+        //     foreach(Cliente c in )
         //}
 
         

@@ -43,5 +43,30 @@ namespace TP.Plantilla.AccessData.Queries
             
             return result.ToList();
         }
+        public List<GetVentas> FiltrarVentaPorProducto(string nombre)
+        {
+            var db = new QueryFactory(connection, sqlKataCompiler);
+
+            var query = db.Query("Ventas")
+                .Select("Ventas.ventasId", "Ventas.fecha",
+                "Clientes.nombre as ClienteNombre", "Clientes.apellido as ClienteApellido",
+                 "Productos.nombre as ProductoNombre", "Productos.precio as ProductoPrecio"
+
+                )
+                .Join("Carritos", "Ventas.carritoId", "Carritos.carritoId")
+                .Join("Carrito_Productos", "Carritos.carritoProductoId", "Carrito_Productos.carrito_productoId")
+                .Join("Clientes", "Carritos.clienteId", "Clientes.clienteId")
+                .Join("Productos", "Carrito_Productos.carrito_productoId", "Productos.carrito_productoId")
+                .When(!string.IsNullOrWhiteSpace(nombre), c => c.WhereLike("Productos.nombre", $"%{nombre}%"));
+
+            var result = query.Get<GetVentas>();
+
+
+
+            return result.ToList();
+        }
+
+
+
     }
 }

@@ -15,19 +15,19 @@ namespace TP.Plantilla.API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    
+
     public class VentasController : ControllerBase
     {
         private readonly IVentasService _service;
         private readonly IVentasQuery _query;
-        private readonly SystemContext context;
-        
 
-        public VentasController(IVentasService service,SystemContext c,IVentasQuery query)
+
+
+        public VentasController(IVentasService service, IVentasQuery query)
         {
             _service = service;
-            
-            context = c;
+
+
 
             _query = query;
 
@@ -36,16 +36,25 @@ namespace TP.Plantilla.API.Controllers
         [HttpPost]
         public Ventas Post(VentasDto ventas) //que reciba un list de productos
         {
-            
-           
+
+
             return _service.CreateVenta(ventas);
         }
 
-        [HttpGet]
-        public List<GetVentas> Get()
-        {
-            return _query.ListarVentas();
+       // [HttpGet]
+       // public List<GetVentas> Get()
+       // {
+        //    return _query.ListarVentas();
             //return context.Ventas.Include(v => v.carritoNavigator).ToList();
+        //}
+      
+        [HttpGet]
+        public List<GetVentas> FiltrarVentaPorProducto(string nombre)
+        {
+            return _query.FiltrarVentaPorProducto(nombre);
+
         }
+
+
     }
 }

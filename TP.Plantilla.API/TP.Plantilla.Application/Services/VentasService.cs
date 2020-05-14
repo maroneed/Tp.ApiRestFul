@@ -25,13 +25,14 @@ namespace TP.Plantilla.Application.Services
         public Ventas CreateVenta(VentasDto ventas)
         {
 
+
+
+            DateTime fechaDeHoy = DateTime.Now;
             
-
-
             var entity = new Ventas
             {
                 carritoId = ventas.carritoId,
-                fecha = ventas.fecha,
+                fecha = fechaDeHoy,
                 carritoNavigator = ventas.carritoNavigator
                
 

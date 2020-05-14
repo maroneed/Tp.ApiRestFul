@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SqlKata;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,7 @@ using TP.Plantilla.AccessData;
 using TP.Plantilla.Application.Services;
 using TP.Plantilla.Domain.DTOs;
 using TP.Plantilla.Domain.Entities;
+using TP.Plantilla.Domain.Queries;
 
 namespace TP.Plantilla.API.Controllers
 {
@@ -15,12 +17,12 @@ namespace TP.Plantilla.API.Controllers
     public class ProductoController: ControllerBase
     {
         private readonly IProductoService _service;
-        private readonly SystemContext context;
+        private readonly IProductoQuery _query;
 
-        public ProductoController(IProductoService service,SystemContext c)
+        public ProductoController(IProductoService service,IProductoQuery query)
         {
             _service = service;
-            context = c;
+            _query = query;
         }
 
         [HttpPost]
@@ -29,10 +31,18 @@ namespace TP.Plantilla.API.Controllers
             return _service.CreateProducto(producto);
         }
 
+        //[HttpGet]
+        //public IEnumerable<Producto> Get()
+       // {
+       //     return context.Productos.ToList();
+        //}
         [HttpGet]
-        public IEnumerable<Producto> Get()
+        public List<Producto> GetProductos(string codigo)
         {
-            return context.Productos.ToList();
+            return _query.GetProductos(codigo);
+
         }
+        
+
     }
 }
