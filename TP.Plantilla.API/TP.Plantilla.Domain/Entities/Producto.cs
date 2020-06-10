@@ -11,5 +11,7 @@ namespace TP.Plantilla.Domain.Entities
         public string marca { get; set; }
         public string nombre { get; set; }
         public decimal precio { get; set; }
+        public ICollection<Carrito_Producto> carritoProductoNavigator { get; set; }
+
     }
 }

@@ -14,6 +14,7 @@ namespace TP.Plantilla.Application.Services
     {
         Ventas CreateVenta(VentasDto ventas);
         public List<GetVentas> ListarVentas(string nombre);
+        public List<GetVentas> ListarVentasDeHoy();
 
     }
     public class VentasService : IVentasService
@@ -52,6 +53,11 @@ namespace TP.Plantilla.Application.Services
         public List<GetVentas> ListarVentas(string nombre)
         {
             return _query.FiltrarVentaPorProducto(nombre);
+        }
+
+        public List<GetVentas> ListarVentasDeHoy()
+        {
+            return _query.ListarVentas();
         }
     }
 }

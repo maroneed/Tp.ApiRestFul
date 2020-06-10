@@ -12,10 +12,11 @@ namespace TP.Plantilla.AccessData
         {
 
         }
-        public DbSet<Carrito> Carritos { get; set; }
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Ventas> Ventas { get; set; }
         public DbSet<Producto> Productos { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+
+        public DbSet<Carrito> Carritos { get; set; }
+        public DbSet<Ventas> Ventas { get; set; }
         public DbSet<Carrito_Producto> Carrito_Productos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -49,9 +50,11 @@ namespace TP.Plantilla.AccessData
 
             modelBuilder.Entity<Carrito>().Property(v => v.carritoId).ValueGeneratedOnAdd();
 
+
             //carrito_producto
 
             modelBuilder.Entity<Carrito_Producto>().Property(v => v.carrito_productoId).ValueGeneratedOnAdd();
+
 
 
 

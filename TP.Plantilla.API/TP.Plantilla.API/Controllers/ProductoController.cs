@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using SqlKata;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,11 @@ using TP.Plantilla.Domain.Queries;
 
 namespace TP.Plantilla.API.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
+   
+
     public class ProductoController: ControllerBase
     {
         private readonly IProductoService _service;

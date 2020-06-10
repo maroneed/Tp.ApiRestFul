@@ -23,7 +23,7 @@ namespace TP.Plantilla.AccessData.Queries
             this.sqlKataCompiler = sqlKataCompiler;
         }
 
-        public List<ResponseGetCliente> GetClienteDni(string dni) //sino se trae parametro, muestra todos los registros
+        public List<ResponseGetCliente> GetCliente(string dato,string dato2,string dato3) //sino se trae parametro, muestra todos los registros
         {
             var db = new QueryFactory(connection, sqlKataCompiler);
 
@@ -33,33 +33,37 @@ namespace TP.Plantilla.AccessData.Queries
                 "Clientes.dni",
                 "Clientes.direccion",
                 "Clientes.telefono")
-                
-                .When(!string.IsNullOrWhiteSpace(dni), c => c.WhereLike("Clientes.dni", $"{dni}"));
-                
+
+
+                .When(!string.IsNullOrWhiteSpace(dato2), c => c.WhereLike("Clientes.nombre", $"{dato2}"))
+
+                .When(!string.IsNullOrWhiteSpace(dato3), c => c.WhereLike("Clientes.apellido", $"{dato3}"))
+
+                .Or()
+
+                .When(!string.IsNullOrWhiteSpace(dato), c => c.WhereLike("Clientes.dni", $"{dato}"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             var result = query.Get<ResponseGetCliente>();
 
             return result.ToList();
         }
 
-        public List<ResponseGetCliente> GetClienteNombreApellido(string nombre)
-        {
-            var db = new QueryFactory(connection, sqlKataCompiler);
-
-            var query = db.Query("Clientes")
-                .Select("Clientes.nombre",
-                "Clientes.apellido",
-                "Clientes.dni",
-                "Clientes.direccion",
-                "Clientes.telefono")
-                .When(!string.IsNullOrWhiteSpace(nombre), c => c.WhereLike("Clientes.nombre", $"%{nombre}%"));
-
-
-
-            var result = query.Get<ResponseGetCliente>();
-
-            return result.ToList();
-        }
+        
 
     }
 }

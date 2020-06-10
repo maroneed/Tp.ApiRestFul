@@ -46,13 +46,14 @@ namespace TP.Plantilla.API.Controllers
             {
                 return BadRequest(e.Message);
             }
-            
+
         }
 
-       
-      
+
+
         [HttpGet]
-        public IActionResult FiltrarVentaPorProducto(string nombre)
+
+        public IActionResult MostrarVentas(string nombre)
         {
             try
             {
@@ -63,9 +64,29 @@ namespace TP.Plantilla.API.Controllers
             {
                 return BadRequest(e.Message);
             }
-            
+
 
         }
+
+        [HttpGet]
+        [Route("VentasDeHoy")]
+
+        public IActionResult VentasDeHoy()
+        {
+            try
+            {
+                return new JsonResult(_service.ListarVentasDeHoy()) { StatusCode = 201 };
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
+
+        }
+
+
 
 
     }

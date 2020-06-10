@@ -49,7 +49,8 @@ namespace TP.Plantilla.API.Controllers
         //[HttpGet]
         public IEnumerable<Carrito_Producto> Get()
         {
-            return context.Carrito_Productos.Include(c => c.productoNavigator).ToList();
+            return context.Carrito_Productos.ToList();
+            //return context.Carrito_Productos.Include(c => c.productoNavigator).ToList();
         }
         //public IActionResult GetCarrito_Producto()
         //{

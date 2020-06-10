@@ -8,7 +8,11 @@ namespace TP.Plantilla.Domain.DTOs
     public class Carrito_ProductoDto
     {
         public int carrito_productoId { get; set; }
-        public ICollection<Producto> productoNavigator { get; set; }
+
+        public int productoId { get; set; }
+
+        public int carritoId { get; set; }
+        public Carrito carritoNavigator { get; set; }
 
     }
 }

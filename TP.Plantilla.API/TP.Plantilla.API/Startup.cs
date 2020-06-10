@@ -26,6 +26,7 @@ namespace TP.Plantilla.API
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -59,8 +60,13 @@ namespace TP.Plantilla.API
             {
                 return new SqlConnection(connectionString);
             });
+
+            //cors
+
             
-            
+
+
+
 
         }
 
@@ -76,12 +82,29 @@ namespace TP.Plantilla.API
 
             app.UseRouting();
 
+
+            app.UseCors(builder =>
+            {
+            builder.WithOrigins("http://localhost:3000");
+                builder.AllowAnyMethod();
+                builder.AllowAnyHeader();
+                builder.AllowCredentials();
+                
+            
+            });
+
+
+
+
             app.UseAuthorization();
+           
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            
         }
     }
 }

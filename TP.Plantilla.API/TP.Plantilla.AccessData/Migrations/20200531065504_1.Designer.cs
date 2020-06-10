@@ -10,8 +10,8 @@ using TP.Plantilla.AccessData;
 namespace TP.Plantilla.AccessData.Migrations
 {
     [DbContext(typeof(SystemContext))]
-    [Migration("20200513000847_2")]
-    partial class _2
+    [Migration("20200531065504_1")]
+    partial class _1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,18 +28,10 @@ namespace TP.Plantilla.AccessData.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("carritoProductoId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("carrito_ProductoNavigatorcarrito_productoId")
-                        .HasColumnType("int");
-
                     b.Property<int>("clienteId")
                         .HasColumnType("int");
 
                     b.HasKey("carritoId");
-
-                    b.HasIndex("carrito_ProductoNavigatorcarrito_productoId");
 
                     b.HasIndex("clienteId");
 
@@ -53,7 +45,15 @@ namespace TP.Plantilla.AccessData.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("carritoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("productoId")
+                        .HasColumnType("int");
+
                     b.HasKey("carrito_productoId");
+
+                    b.HasIndex("carritoId");
 
                     b.ToTable("Carrito_Productos");
                 });
@@ -158,13 +158,18 @@ namespace TP.Plantilla.AccessData.Migrations
 
             modelBuilder.Entity("TP.Plantilla.Domain.Entities.Carrito", b =>
                 {
-                    b.HasOne("TP.Plantilla.Domain.Entities.Carrito_Producto", "carrito_ProductoNavigator")
-                        .WithMany()
-                        .HasForeignKey("carrito_ProductoNavigatorcarrito_productoId");
-
                     b.HasOne("TP.Plantilla.Domain.Entities.Cliente", "ClienteNavigator")
                         .WithMany()
                         .HasForeignKey("clienteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TP.Plantilla.Domain.Entities.Carrito_Producto", b =>
+                {
+                    b.HasOne("TP.Plantilla.Domain.Entities.Carrito", "carritoNavigator")
+                        .WithMany()
+                        .HasForeignKey("carritoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

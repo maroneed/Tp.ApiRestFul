@@ -44,12 +44,12 @@ namespace TP.Plantilla.API.Controllers
         
 
         [HttpGet]
-        public IActionResult GetClienteDni(string dni)
+        public IActionResult GetCliente(string dni, string nombre,string apellido)
         {
 
             try
             {
-                return new JsonResult(_service.GetCliente(dni)) { StatusCode = 201 };
+                return new JsonResult(_service.GetCliente(dni,nombre,apellido)) { StatusCode = 201 };
 
             }
             catch (Exception e)

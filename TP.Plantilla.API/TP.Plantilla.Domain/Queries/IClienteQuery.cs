@@ -9,8 +9,9 @@ namespace TP.Plantilla.Domain.Queries
 {
     public interface IClienteQuery
     {
-        public List<ResponseGetCliente> GetClienteDni(string dni); //sino tiene parametros trae todo
-        public List<ResponseGetCliente> GetClienteNombreApellido(string nombre);
+       
+        public List<ResponseGetCliente> GetCliente(string dato,string dato2,string dato3);
+        
 
 
     }

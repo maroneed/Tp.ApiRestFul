@@ -11,9 +11,7 @@ namespace TP.Plantilla.Domain.DTOs
 
         public int clienteId { get; set; }
 
-        public int carritoProductoId { get; set; }
-
-        public Carrito_Producto carrito_ProductoNavigator { get; set; }
+        
         public Cliente ClienteNavigator { get; set; }
     }
 }

@@ -10,8 +10,8 @@ using TP.Plantilla.AccessData;
 namespace TP.Plantilla.AccessData.Migrations
 {
     [DbContext(typeof(SystemContext))]
-    [Migration("20200512220042_1")]
-    partial class _1
+    [Migration("20200601211325_2")]
+    partial class _2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,9 +27,6 @@ namespace TP.Plantilla.AccessData.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("carritoProductoId")
-                        .HasColumnType("int");
 
                     b.Property<int>("clienteId")
                         .HasColumnType("int");
@@ -51,10 +48,14 @@ namespace TP.Plantilla.AccessData.Migrations
                     b.Property<int>("carritoId")
                         .HasColumnType("int");
 
+                    b.Property<int>("productoId")
+                        .HasColumnType("int");
+
                     b.HasKey("carrito_productoId");
 
-                    b.HasIndex("carritoId")
-                        .IsUnique();
+                    b.HasIndex("carritoId");
+
+                    b.HasIndex("productoId");
 
                     b.ToTable("Carrito_Productos");
                 });
@@ -105,9 +106,6 @@ namespace TP.Plantilla.AccessData.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("carrito_productoId")
-                        .HasColumnType("int");
-
                     b.Property<string>("codigo")
                         .IsRequired()
                         .HasColumnType("nvarchar(45)")
@@ -127,8 +125,6 @@ namespace TP.Plantilla.AccessData.Migrations
                         .HasColumnType("decimal(15,2)");
 
                     b.HasKey("productoId");
-
-                    b.HasIndex("carrito_productoId");
 
                     b.HasIndex("codigo")
                         .IsUnique();
@@ -168,18 +164,17 @@ namespace TP.Plantilla.AccessData.Migrations
 
             modelBuilder.Entity("TP.Plantilla.Domain.Entities.Carrito_Producto", b =>
                 {
-                    b.HasOne("TP.Plantilla.Domain.Entities.Carrito", null)
-                        .WithOne("carrito_ProductoNavigator")
-                        .HasForeignKey("TP.Plantilla.Domain.Entities.Carrito_Producto", "carritoId")
+                    b.HasOne("TP.Plantilla.Domain.Entities.Carrito", "carritoNavigator")
+                        .WithMany()
+                        .HasForeignKey("carritoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
 
-            modelBuilder.Entity("TP.Plantilla.Domain.Entities.Producto", b =>
-                {
-                    b.HasOne("TP.Plantilla.Domain.Entities.Carrito_Producto", null)
-                        .WithMany("productoNavigator")
-                        .HasForeignKey("carrito_productoId");
+                    b.HasOne("TP.Plantilla.Domain.Entities.Producto", null)
+                        .WithMany("carritoProductoNavigator")
+                        .HasForeignKey("productoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("TP.Plantilla.Domain.Entities.Ventas", b =>

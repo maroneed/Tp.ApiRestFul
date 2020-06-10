@@ -13,9 +13,9 @@ namespace TP.Plantilla.Application.Services
 
     public interface IClienteService
     {
-        Cliente CreateCliente(ClienteDto Cliente);
+        public Cliente CreateCliente(ClienteDto Cliente);
         // public List <Cliente> ListarClientes();
-        public List<ResponseGetCliente> GetCliente(string dni);
+        public List<ResponseGetCliente> GetCliente(string nombre,string dato2,string dato3);
 
     }
     public class ClienteService : IClienteService
@@ -44,10 +44,10 @@ namespace TP.Plantilla.Application.Services
             return entity;
         }
 
-        public List<ResponseGetCliente> GetCliente(string dni)
+        public List<ResponseGetCliente> GetCliente(string dato,string dato2,string dato3)
         {
 
-            return _query.GetClienteDni(dni);
+            return _query.GetCliente(dato,dato2,dato3);
             //return context.Ventas.Include(v => v.carritoNavigator).ToList();
         }
 

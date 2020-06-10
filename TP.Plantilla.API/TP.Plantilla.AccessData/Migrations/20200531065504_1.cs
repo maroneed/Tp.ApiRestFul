@@ -30,8 +30,7 @@ namespace TP.Plantilla.AccessData.Migrations
                 {
                     carritoId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    clienteId = table.Column<int>(nullable: false),
-                    carritoProductoId = table.Column<int>(nullable: false)
+                    clienteId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -50,6 +49,7 @@ namespace TP.Plantilla.AccessData.Migrations
                 {
                     carrito_productoId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    productoId = table.Column<int>(nullable: false),
                     carritoId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -109,8 +109,7 @@ namespace TP.Plantilla.AccessData.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Carrito_Productos_carritoId",
                 table: "Carrito_Productos",
-                column: "carritoId",
-                unique: true);
+                column: "carritoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Carritos_clienteId",

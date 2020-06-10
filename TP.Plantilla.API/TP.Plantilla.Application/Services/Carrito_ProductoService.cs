@@ -39,7 +39,10 @@ namespace TP.Plantilla.Application.Services
 
             var entity = new Carrito_Producto
             {
-                productoNavigator = carrito_productoDto.productoNavigator
+                productoId = carrito_productoDto.productoId,
+                carritoId = carrito_productoDto.carritoId,
+                carritoNavigator = carrito_productoDto.carritoNavigator
+                
 
             };
             _repository.Add(entity);

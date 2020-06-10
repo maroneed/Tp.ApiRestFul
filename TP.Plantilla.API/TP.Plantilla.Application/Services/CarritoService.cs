@@ -26,7 +26,7 @@ namespace TP.Plantilla.Application.Services
             var entity = new Carrito
             {
                 clienteId = carrito.clienteId,
-                carritoProductoId = carrito.carritoProductoId
+                ClienteNavigator = carrito.ClienteNavigator
 
 
             };
