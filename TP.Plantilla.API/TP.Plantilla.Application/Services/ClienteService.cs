@@ -37,8 +37,9 @@ namespace TP.Plantilla.Application.Services
                 apellido = cliente.apellido,
                 dni = cliente.dni,
                 telefono = cliente.telefono,
-                direccion = cliente.direccion
+                direccion = cliente.direccion,
             };
+            
             _repository.Add<Cliente>(entity);
             
             return entity;

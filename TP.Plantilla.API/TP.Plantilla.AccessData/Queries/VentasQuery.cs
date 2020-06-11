@@ -25,23 +25,30 @@ namespace TP.Plantilla.AccessData.Queries
         public List<GetVentas> ListarVentas()
         {
             var db = new QueryFactory(connection, sqlKataCompiler);
-            
-            int dia = DateTime.Now.Day;
-            string diax = dia.ToString();
-            int mes = DateTime.Now.Month;
-            int año = DateTime.Now.Year;
+
+
+            var x = DateTime.Now;
+            string fecha = x.ToShortDateString();
+            string hoy = x.ToString("yyyy-MM-dd");
 
             //string fechaHoy = fecha.ToString();
             var query = db.Query("Ventas")
                 .Select("Ventas.ventasId", "Ventas.fecha",
                 "Clientes.nombre as ClienteNombre", "Clientes.apellido as ClienteApellido",
                  "Productos.nombre as ProductoNombre", "Productos.precio as ProductoPrecio"
+                 
                 )
                 .Join("Carritos", "Ventas.carritoId", "Carritos.carritoId")
                 .Join("Carrito_Productos", "Carritos.carritoId", "Carrito_Productos.carritoId")
                 .Join("Clientes", "Carritos.clienteId", "Clientes.clienteId")
                 .Join("Productos", "Carrito_Productos.productoId", "Productos.productoId")
-                .WhereDate("Ventas.fecha", $"{diax}");
+                .WhereLike("Ventas.fecha", $"%{hoy}%");
+                
+
+
+
+
+
 
 
 
