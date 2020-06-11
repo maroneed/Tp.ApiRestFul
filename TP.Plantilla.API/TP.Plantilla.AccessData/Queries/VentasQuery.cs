@@ -27,9 +27,8 @@ namespace TP.Plantilla.AccessData.Queries
             var db = new QueryFactory(connection, sqlKataCompiler);
 
 
-            var x = DateTime.Now;
-            string fecha = x.ToShortDateString();
-            string hoy = x.ToString("yyyy-MM-dd");
+            var x = DateTime.Now; //guardo fecha actual
+            string hoy = x.ToString("yyyy-MM-dd"); //almaceno la fecha sin la hora
 
             //string fechaHoy = fecha.ToString();
             var query = db.Query("Ventas")
