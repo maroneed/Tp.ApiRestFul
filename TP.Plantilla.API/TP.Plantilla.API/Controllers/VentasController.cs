@@ -34,9 +34,10 @@ namespace TP.Plantilla.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(VentasDto ventas) //que reciba un list de productos
+        public IActionResult Post(ConcretarVentaDto ventas) //que reciba un list de productos
         {
 
+            
             try
             {
                 return new JsonResult(_service.CreateVenta(ventas)) { StatusCode = 201 };

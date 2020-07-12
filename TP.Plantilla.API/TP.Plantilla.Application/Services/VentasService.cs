@@ -12,7 +12,7 @@ namespace TP.Plantilla.Application.Services
 {
     public interface IVentasService
     {
-        Ventas CreateVenta(VentasDto ventas);
+        Ventas CreateVenta(ConcretarVentaDto ventas);
         public List<GetVentas> ListarVentas(string nombre);
         public List<GetVentas> ListarVentasDeHoy();
 
@@ -29,26 +29,37 @@ namespace TP.Plantilla.Application.Services
             _query = query;
         }
 
-        public Ventas CreateVenta(VentasDto ventas)
+        public Ventas CreateVenta(ConcretarVentaDto ventas)
         {
 
 
 
-            DateTime fechaDeHoy = DateTime.Now;
-            
-            var entity = new Ventas
+            var carrito = new Carrito
             {
-                carritoId = ventas.carritoId,
-                fecha = fechaDeHoy,
-                carritoNavigator = ventas.carritoNavigator
-               
-
+                clienteId = Int32.Parse(ventas.clienteId),
             };
 
+            _repository.Add<Carrito>(carrito);
 
-            _repository.Add<Ventas>(entity);
+            var venta = new Ventas
+            {
+                carritoId = carrito.carritoId,
+                fecha = DateTime.Now
+            };
 
-            return entity;
+            _repository.Add<Ventas>(venta);
+
+            foreach (string productoId in ventas.ListaProductos)
+            {
+                var cp = new Carrito_Producto
+                {
+                    carritoId = carrito.carritoId,
+                    productoId = Int32.Parse(productoId)
+                };
+                _repository.Add<Carrito_Producto>(cp);
+            }
+
+            return venta;
         }
         public List<GetVentas> ListarVentas(string nombre)
         {
